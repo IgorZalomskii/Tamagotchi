@@ -52,14 +52,16 @@ public class FragmentHall extends AppCompatActivity {
                 startActivity(i);
             }
         });
-//        Button game = findViewById(R.id.game);
-//        game.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(FragmentHall.this, FragmentGame.class);
-//                startActivity(i);
-//
-//            }
-//        });
+
+
+        Button game = findViewById(R.id.game);
+        game.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(FragmentHall.this, Game.class);
+                startActivity(i);
+
+            }
+        });
     }
 }

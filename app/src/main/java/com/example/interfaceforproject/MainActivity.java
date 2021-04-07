@@ -1,58 +1,78 @@
 package com.example.interfaceforproject;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Switch;
+import android.widget.EditText;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends Activity implements View.OnClickListener {
+    EditText editTextStr;
+    Button btnSave, btnLoad, go;
+    SharedPreferences sharedPreferences;
+
+    final String SAVED_TEXT = "TEXT";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button kitchen = findViewById(R.id.kitchen);
-        kitchen.setOnClickListener(new View.OnClickListener() {
+        editTextStr = (EditText) findViewById(R.id.editTextStr);
+
+        btnSave = (Button) findViewById(R.id.save);
+        btnSave.setOnClickListener((View.OnClickListener) this);
+
+        btnLoad = (Button) findViewById(R.id.load);
+        btnLoad.setOnClickListener((View.OnClickListener) this);
+
+        go = findViewById(R.id.go);
+        go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, FragmentKitchen.class);
+                Intent i = new Intent(MainActivity.this, FragmentHall.class);
                 startActivity(i);
+
             }
         });
 
-
-        Button toilet = findViewById(R.id.toilet);
-        toilet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, FragmentToilet.class);
-                startActivity(i);
-            }
-        });
-
-
-        Button bedroom = findViewById(R.id.bedroom);
-        bedroom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, FragmentBedroom.class);
-                startActivity(i);
-            }
-        });
-
-        Button shopFH = findViewById(R.id.shopFH);
-        shopFH.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, ShopFH.class);
-                startActivity(i);
-            }
-        });
+        loadData();
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.save:
+                saveData();
+                break;
+            case R.id.load:
+                loadData();
+                break;
+            default:
+                break;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        saveData();
+    }
+
+    void saveData() {
+        sharedPreferences = getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(SAVED_TEXT, editTextStr.getText().toString());
+        editor.commit();
+        Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
+    }
+
+    void loadData() {
+        sharedPreferences = getPreferences(MODE_PRIVATE);
+        String savedText = sharedPreferences.getString(SAVED_TEXT, "");
+        editTextStr.setText(savedText);
+    }
 }

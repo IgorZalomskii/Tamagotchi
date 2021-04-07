@@ -45,13 +45,13 @@
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="473dp" />
 
-<!--    <Button-->
-<!--        android:id="@+id/game"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_x="12dp"-->
-<!--        android:layout_y="216dp"-->
-<!--        android:text="Игры" />-->
+    <Button
+        android:id="@+id/game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="12dp"
+        android:layout_y="216dp"
+        android:text="Игра" />
 
     <Button
         android:id="@+id/shopFH"
@@ -61,13 +61,4 @@
         android:layout_y="21dp"
         android:text="Магазин" />
 
-    <Button
-        android:id="@+id/clothes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="316dp"
-        android:layout_y="107dp"
-        android:text="Одежда" />
-
-
-</AbsoluteLayout>
+    </AbsoluteLayout>
