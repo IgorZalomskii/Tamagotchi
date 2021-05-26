@@ -42,11 +42,11 @@ public class FragmentToilet extends Activity {
             }
         });
 
-        Button shopFT = findViewById(R.id.shopFT);
-        shopFT.setOnClickListener(new View.OnClickListener() {
+        Button tu = findViewById(R.id.tu);
+        tu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FragmentToilet.this, ShopFT.class);
+                Intent i = new Intent(FragmentToilet.this, Status.class);
                 startActivity(i);
             }
         });

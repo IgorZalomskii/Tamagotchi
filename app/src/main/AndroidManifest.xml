@@ -19,6 +19,20 @@
         </activity>
 
         <activity
+            android:name=".GameActivity"
+            android:label="GameActivity">
+        </activity>
+
+        <activity
+            android:name=".FragmentToilet"
+            android:label="FragmentToilet" >
+        </activity>
+
+        <activity
+            android:name=".Status">
+        </activity>
+
+        <activity
             android:name=".FragmentBedroom"
             android:label="FragmentBedroom">
         </activity>
@@ -33,31 +47,9 @@
             android:label="FragmentHall" >
         </activity>
 
-        <activity
-            android:name=".FragmentToilet"
-            android:label="FragmentToilet" >
-        </activity>
 
-        <activity
-            android:name=".ShopFH"
-            android:label="ShopFH">
-        </activity>
 
-        <activity
-            android:name=".ShopFK"
-            android:label="ShopFH">
-        </activity>
 
-        <activity
-            android:name=".ShopFT"
-            android:label="ShopFH">
-        </activity>
-
-        <activity
-            android:name=".ShopFB"
-            android:label="ShopFH">
-        </activity>
-        
     </application>
 
 </manifest>

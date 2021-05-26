@@ -42,12 +42,11 @@ public class FragmentKitchen extends AppCompatActivity {
             }
         });
 
-        Button shopFK = findViewById(R.id.shopFK);
+        Button shopFK = findViewById(R.id.eat);
         shopFK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FragmentKitchen.this, ShopFK.class);
-                startActivity(i);
+
             }
         });
     }

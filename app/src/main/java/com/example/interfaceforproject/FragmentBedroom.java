@@ -43,12 +43,10 @@ public class FragmentBedroom extends AppCompatActivity {
             }
         });
 
-        Button shop = findViewById(R.id.shopFB);
+        Button shop = findViewById(R.id.bed);
         shop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FragmentBedroom.this, ShopFB.class);
-                startActivity(i);
 
             }
         });
