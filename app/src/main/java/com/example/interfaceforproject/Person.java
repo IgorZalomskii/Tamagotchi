@@ -2,9 +2,11 @@ package com.example.interfaceforproject;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
@@ -15,6 +17,11 @@ public class Person extends AppCompatActivity {
     public int fun;
     public int toilet;
 
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Start();
+    }
 
     public void Start(){
         eat = new Random().nextInt(40) + 40;

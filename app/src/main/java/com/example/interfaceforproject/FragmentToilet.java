@@ -46,8 +46,7 @@ public class FragmentToilet extends Activity {
         tu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FragmentToilet.this, Status.class);
-                startActivity(i);
+
             }
         });
     }

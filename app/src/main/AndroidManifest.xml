@@ -29,10 +29,6 @@
         </activity>
 
         <activity
-            android:name=".Status">
-        </activity>
-
-        <activity
             android:name=".FragmentBedroom"
             android:label="FragmentBedroom">
         </activity>

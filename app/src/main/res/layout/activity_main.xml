@@ -6,6 +6,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
+    android:background="@drawable/whiteblue"
     android:weightSum="100">
 
     <LinearLayout
@@ -30,14 +31,6 @@
         android:layout_height="wrap_content"
         android:text="Save">
 
-    </Button>
-
-    <Button
-        android:id="@+id/load"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Load">
-        
     </Button>
 
     <Button

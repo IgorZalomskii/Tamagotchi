@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/toilet"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
@@ -22,14 +23,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="25"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/status"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Статус" />
-            </LinearLayout>
+                android:orientation="horizontal"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -51,8 +45,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:textColor="#8E0C0C"
-                    android:text="go" />
+                    android:text="Сходить в туалет"
+                    android:textColor="#8E0C0C" />
             </LinearLayout>
 
         </LinearLayout>
