@@ -74,9 +74,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         sharedPreferences = getPreferences(MODE_PRIVATE);
         String savedText = sharedPreferences.getString(SAVED_TEXT, "");
         editTextStr.setText(savedText);
-        if (savedText != null){
-            Intent i = new Intent(this, Hall.class);
-            startActivity(i);
-        }
+//        if (savedText != null){
+//            Intent i = new Intent(this, Hall.class);
+//            startActivity(i);
+//        }
     }
 }

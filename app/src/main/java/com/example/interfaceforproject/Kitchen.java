@@ -56,6 +56,7 @@ public class Kitchen extends Person {
         goToEat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                if (textMoney >= 50)
                 Toast.makeText(getApplicationContext(), "Ням-Ням", Toast.LENGTH_SHORT).show();
                 eat= 100;
             }

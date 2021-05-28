@@ -8,17 +8,19 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Person extends Activity{
+public class Person extends AppCompatActivity {
 
     public int eat;
     public int sleep;
     public int fun;
-    public int toilet ;
+    public int toilet;
+    public TextView textMoney;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -52,15 +54,18 @@ public class Person extends Activity{
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
+
                 fun = fun - 1;
                 eat = eat - 1;
 
-
                 runOnUiThread(new Runnable() {
+
                     @Override
                     public void run() {
+
                         funText.setText("" + fun);
                         eatText.setText("" + eat);
+
                     }
                 });
             }
