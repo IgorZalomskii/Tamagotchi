@@ -1,14 +1,18 @@
 package com.example.interfaceforproject;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-public class FragmentToilet extends Activity {
+import java.util.Timer;
+
+public class Toilet extends Person {
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -19,7 +23,7 @@ public class FragmentToilet extends Activity {
         hall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FragmentToilet.this, FragmentHall.class);
+                Intent i = new Intent(Toilet.this, Hall.class);
                 startActivity(i);
             }
         });
@@ -28,7 +32,7 @@ public class FragmentToilet extends Activity {
         kitchen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FragmentToilet.this, FragmentKitchen.class);
+                Intent i = new Intent(Toilet.this, Kitchen.class);
                 startActivity(i);
             }
         });
@@ -37,16 +41,26 @@ public class FragmentToilet extends Activity {
         bedroom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FragmentToilet.this, FragmentBedroom.class);
+                Intent i = new Intent(Toilet.this, Bedroom.class);
                 startActivity(i);
             }
         });
 
-        Button tu = findViewById(R.id.tu);
-        tu.setOnClickListener(new View.OnClickListener() {
+        Button status = findViewById(R.id.state);
+        status.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(Toilet.this, Person.class);
+                startActivity(i);
+            }
+        });
 
+        Button goToToilet = findViewById(R.id.gototuilet);
+        goToToilet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Нужда устранена", Toast.LENGTH_SHORT).show();
+                toilet = 100;
             }
         });
     }

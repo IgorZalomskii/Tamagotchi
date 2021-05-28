@@ -37,7 +37,7 @@ public class GameActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(GameActivity.this, FragmentHall.class);
+                Intent i = new Intent(GameActivity.this, Hall.class);
                 startActivity(i);
             }
         });

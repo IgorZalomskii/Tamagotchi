@@ -13,7 +13,6 @@
         android:weightSum="100">
 
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -24,8 +23,17 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="7dp"
                 android:layout_weight="25"
-                android:orientation="horizontal"/>
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/state"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Статус"
+                    android:textColor="#21770A" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -38,16 +46,16 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="25"
                 android:layout_margin="7dp"
+                android:layout_weight="25"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/eat"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="#8E0C0C"
-                    android:text="Кушать" />
+                    android:text="Поесть"
+                    android:textColor="#8E0C0C" />
             </LinearLayout>
 
         </LinearLayout>

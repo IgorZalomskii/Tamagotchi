@@ -3,16 +3,13 @@ package com.example.interfaceforproject;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 
-import android.os.Build;
 import android.view.MotionEvent;
 import android.view.SurfaceView;
-import android.widget.TextView;
 
 
 import java.util.ArrayList;
@@ -136,7 +133,7 @@ public class GameView extends SurfaceView implements Runnable {
     private void waitBeforeExiting() {
         try {
             Thread.sleep(3000);
-            activity.startActivity(new Intent(activity, FragmentHall.class));
+            activity.startActivity(new Intent(activity, Hall.class));
             activity.finish();
         } catch (InterruptedException e) {
             e.printStackTrace();

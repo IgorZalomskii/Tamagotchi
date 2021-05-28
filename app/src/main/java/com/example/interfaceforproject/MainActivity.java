@@ -26,13 +26,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btnSave = (Button) findViewById(R.id.save);
         btnSave.setOnClickListener((View.OnClickListener) this);
 
-
+        btnLoad = (Button) findViewById(R.id.load);
+        btnLoad.setOnClickListener((View.OnClickListener) this);
 
         go = findViewById(R.id.go);
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, FragmentHall.class);
+                Intent i = new Intent(MainActivity.this, Hall.class);
                 startActivity(i);
 
             }
@@ -46,6 +47,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.save:
                 saveData();
+                break;
+            case R.id.load:
+                loadData();
                 break;
             default:
                 break;
@@ -70,5 +74,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         sharedPreferences = getPreferences(MODE_PRIVATE);
         String savedText = sharedPreferences.getString(SAVED_TEXT, "");
         editTextStr.setText(savedText);
+        if (savedText != null){
+            Intent i = new Intent(this, Hall.class);
+            startActivity(i);
+        }
     }
 }
