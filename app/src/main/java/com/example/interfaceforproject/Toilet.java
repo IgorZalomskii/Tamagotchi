@@ -8,9 +8,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import java.util.Timer;
-
-public class Toilet extends Person {
+public class Toilet extends PersonView {
 
 
 
@@ -50,7 +48,7 @@ public class Toilet extends Person {
         status.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Toilet.this, Person.class);
+                Intent i = new Intent(Toilet.this, PersonView.class);
                 startActivity(i);
             }
         });

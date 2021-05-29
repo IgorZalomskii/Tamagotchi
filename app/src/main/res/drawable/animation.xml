@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+<!--    <item android:drawable="@drawable/one" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/two" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/three" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/four" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/five" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/six" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/seven" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/eight" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/nine" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/ten" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/eleven" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/twelve" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/thirteen" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/fourteen" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/fiveteen" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/sixteen" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/seventeen" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/eighteen" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/nineteen" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/twenty" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/twenty_one" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/twenty_two" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/twenty_three" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/twenty_four" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/twenty_five" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/twenty_six" android:duration="50"/>-->
+<!--    <item android:drawable="@drawable/twenty_eight" android:duration="50"/>-->
+
+
+</animation-list>

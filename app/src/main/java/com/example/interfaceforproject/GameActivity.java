@@ -1,7 +1,5 @@
 package com.example.interfaceforproject;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
@@ -11,7 +9,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class GameActivity extends Person {
+public class GameActivity extends PersonView {
 
     private GameView gameView;
     public static TextView textMoney, textScore;

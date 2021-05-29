@@ -7,9 +7,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
-public class Bedroom extends Person {
+public class Bedroom extends PersonView {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,7 +46,7 @@ public class Bedroom extends Person {
         status.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Bedroom.this, Person.class);
+                Intent i = new Intent(Bedroom.this, PersonView.class);
                 startActivity(i);
             }
         });

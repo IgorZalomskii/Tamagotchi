@@ -19,8 +19,8 @@
         </activity>
 
         <activity
-            android:name=".Person"
-            android:label="Person">
+            android:name=".PersonView"
+            android:label="PersonView">
         </activity>
 
         <activity

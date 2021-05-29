@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends Activity implements View.OnClickListener {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     EditText editTextStr;
     Button btnSave, btnLoad, go;
     SharedPreferences sharedPreferences;
@@ -33,7 +35,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String name = editTextStr.getText().toString();
                 Intent i = new Intent(MainActivity.this, Hall.class);
+                i.putExtra("name", name);
                 startActivity(i);
 
             }
@@ -74,9 +79,5 @@ public class MainActivity extends Activity implements View.OnClickListener {
         sharedPreferences = getPreferences(MODE_PRIVATE);
         String savedText = sharedPreferences.getString(SAVED_TEXT, "");
         editTextStr.setText(savedText);
-//        if (savedText != null){
-//            Intent i = new Intent(this, Hall.class);
-//            startActivity(i);
-//        }
     }
 }
