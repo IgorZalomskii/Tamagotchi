@@ -72,8 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="30dp"
-                android:text="Name:" />
+                android:textSize="30dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -84,11 +83,13 @@
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/nameT"
+                android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:text="      Perec"
                 android:textSize="30dp" />
+
         </LinearLayout>
 
         <LinearLayout

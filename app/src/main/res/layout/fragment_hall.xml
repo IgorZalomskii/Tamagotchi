@@ -130,7 +130,6 @@
                     android:id="@+id/hall"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="7dp"
                     android:text="Зал" />
 
             </LinearLayout>
@@ -145,7 +144,6 @@
                     android:id="@+id/kitchen"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="7dp"
                     android:text="Кухня" />
 
             </LinearLayout>
@@ -160,7 +158,6 @@
                     android:id="@+id/toilet"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="7dp"
                     android:text="Туалет" />
             </LinearLayout>
 
@@ -174,7 +171,6 @@
                     android:id="@+id/bedroom"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="7dp"
                     android:text="Спалня" />
             </LinearLayout>
         </LinearLayout>

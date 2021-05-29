@@ -17,13 +17,10 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class PersonView extends AppCompatActivity {
-
-    public int eat = 50;
-    public int sleep = 50;
-    public int fun = 50;
-    public int toilet = 50;
-    public int textMoney;
-
+    public int f;
+    public int e;
+    public int t;
+    public int s;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,10 +29,10 @@ public class PersonView extends AppCompatActivity {
 
         Bundle arg = getIntent().getExtras();
 
-        TextView nameView = findViewById(R.id.nameT);
-        String name = arg.get("name").toString();
-        nameView.setText(name);
-
+        f = arg.getInt("fun");
+        e = arg.getInt("eat");
+        t = arg.getInt("toilet");
+        s = arg.getInt("sleep");
 
         final TextView funText = (TextView) findViewById(R.id.funstat);
         final TextView eatText = (TextView) findViewById(R.id.eatstat);
@@ -61,16 +58,16 @@ public class PersonView extends AppCompatActivity {
             @Override
             public void run() {
 
-                fun--;
-                eat--;
+                f--;
+                e--;
 
                 runOnUiThread(new Runnable() {
 
                     @Override
                     public void run() {
 
-                        funText.setText("" + fun);
-                        eatText.setText("" + eat);
+                        funText.setText("" + f);
+                        eatText.setText("" + e);
 
                     }
                 });
@@ -80,14 +77,14 @@ public class PersonView extends AppCompatActivity {
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                toilet--;
-                sleep--;
+                t--;
+                s--;
 
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        toiletText.setText("" + toilet);
-                        sleepText.setText("" + sleep);
+                        toiletText.setText("" + t);
+                        sleepText.setText("" + s);
                     }
                 });
             }
@@ -99,7 +96,7 @@ public class PersonView extends AppCompatActivity {
     }
 
     public void CheckDead(){
-        if (eat < 10 || fun < 10 || toilet < 10 || sleep < 10){
+        if (e < 10 || f < 10 || t < 10 || s < 10){
             Toast.makeText(getApplicationContext(), "Критические показатели", Toast.LENGTH_LONG).show();
             Intent i = new Intent(this, PersonView.class);
             startActivity(i);
@@ -107,11 +104,11 @@ public class PersonView extends AppCompatActivity {
     }
 
     public void Dead(){
-        if (eat == 0 || fun == 0 || toilet == 0 || sleep == 0){
+        if (e == 0 || f == 0 || t == 0 || s == 0){
             Toast.makeText(getApplicationContext(), "Жизненные показатели на 0. Вы проиграли", Toast.LENGTH_LONG).show();
         }
 
-        if (eat < 0 || fun < 0 || toilet < 0 || sleep < 0){
+        if (e < 0 || f < 0 || t < 0 || s < 0){
             finishAffinity();
         }
     }

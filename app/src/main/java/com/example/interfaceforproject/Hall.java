@@ -58,29 +58,29 @@ public class Hall extends PersonView {
         game.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fun = 100;
+                f = 100;
                 Intent i = new Intent(Hall.this, GameActivity.class);
                 startActivity(i);
             }
         });
 
-//        ImageView imageView = findViewById(R.id.PersView);
-//
-//        imageView.setBackgroundResource(R.drawable.animation);
-//
-//        final AnimationDrawable animation = (AnimationDrawable) imageView.getBackground();
-//
-//        Button hands = findViewById(R.id.hands);
-//        hands.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (animation.isRunning()){
-//                    animation.stop();
-//                }
-//                else {
-//                    animation.start();
-//                }
-//            }
-//        });
+        ImageView imageView = findViewById(R.id.PersView);
+
+        imageView.setBackgroundResource(R.drawable.animation);
+
+        final AnimationDrawable animation = (AnimationDrawable) imageView.getBackground();
+
+        Button hands = findViewById(R.id.hands);
+        hands.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (animation.isRunning()){
+                    animation.stop();
+                }
+                else {
+                    animation.start();
+                }
+            }
+        });
     }
 }

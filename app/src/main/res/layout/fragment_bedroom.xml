@@ -65,9 +65,52 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="80"
+            android:layout_weight="50"
             android:orientation="horizontal">
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/PersView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/hands"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Помохать" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -87,7 +130,6 @@
                     android:id="@+id/hall"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="7dp"
                     android:text="зал" />
 
             </LinearLayout>
@@ -102,7 +144,6 @@
                     android:id="@+id/kitchen"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="7dp"
                     android:text="Кухня" />
 
             </LinearLayout>
@@ -117,7 +158,6 @@
                     android:id="@+id/toilet"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="7dp"
                     android:text="Туалет" />
             </LinearLayout>
 
@@ -131,7 +171,6 @@
                     android:id="@+id/bedroom"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="7dp"
                     android:text="Спалня" />
             </LinearLayout>
         </LinearLayout>
