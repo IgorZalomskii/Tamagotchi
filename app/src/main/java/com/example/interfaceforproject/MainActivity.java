@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText editTextStr;
     Button btnSave, btnLoad, go;
     SharedPreferences sharedPreferences;
-    Person person;
+    public static Person person;
 
     final String SAVED_TEXT = "TEXT";
 
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnLoad = (Button) findViewById(R.id.load);
         btnLoad.setOnClickListener((View.OnClickListener) this);
 
-        go = findViewById(R.id.go);
+        go = (Button) findViewById(R.id.go);
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

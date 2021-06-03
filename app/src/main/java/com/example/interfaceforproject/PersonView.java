@@ -17,17 +17,16 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class PersonView extends AppCompatActivity {
-    public int f;
-    public int e;
-    public int t;
-    public int s;
+    
+    public int f = MainActivity.person.fun;
+    public int e = MainActivity.person.eat;
+    public int t = MainActivity.person.toilet;
+    public int s = MainActivity.person.sleep;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.person);
-
-
 
         final TextView funText = (TextView) findViewById(R.id.funstat);
         final TextView eatText = (TextView) findViewById(R.id.eatstat);
@@ -67,7 +66,7 @@ public class PersonView extends AppCompatActivity {
                     }
                 });
             }
-        },delay, period);
+        }, delay, period);
 
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -90,22 +89,21 @@ public class PersonView extends AppCompatActivity {
         Dead();
     }
 
-    public void CheckDead(){
-        if (e < 10 || f < 10 || t < 10 || s < 10){
+    public void CheckDead() {
+        if (e < 10 || f < 10 || t < 10 || s < 10) {
             Toast.makeText(getApplicationContext(), "Критические показатели", Toast.LENGTH_LONG).show();
             Intent i = new Intent(this, PersonView.class);
             startActivity(i);
         }
     }
 
-    public void Dead(){
-        if (e == 0 || f == 0 || t == 0 || s == 0){
+    public void Dead() {
+        if (e == 0 || f == 0 || t == 0 || s == 0) {
             Toast.makeText(getApplicationContext(), "Жизненные показатели на 0. Вы проиграли", Toast.LENGTH_LONG).show();
         }
 
-        if (e < 0 || f < 0 || t < 0 || s < 0){
+        if (e < 0 || f < 0 || t < 0 || s < 0) {
             finishAffinity();
         }
     }
 }
-
