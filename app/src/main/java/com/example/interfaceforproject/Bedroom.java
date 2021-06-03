@@ -81,3 +81,4 @@ public class Bedroom extends PersonView {
         });
     }
 }
+

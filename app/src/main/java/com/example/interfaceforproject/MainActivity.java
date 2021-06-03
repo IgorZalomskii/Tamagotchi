@@ -1,6 +1,5 @@
 package com.example.interfaceforproject;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText editTextStr;
     Button btnSave, btnLoad, go;
     SharedPreferences sharedPreferences;
+    Person person;
 
     final String SAVED_TEXT = "TEXT";
 
@@ -35,12 +35,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String name = editTextStr.getText().toString();
+                person = new Person();
                 Intent i = new Intent(MainActivity.this, Hall.class);
-                i.putExtra("name", name);
                 startActivity(i);
-
             }
         });
 

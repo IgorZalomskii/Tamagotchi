@@ -27,12 +27,7 @@ public class PersonView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.person);
 
-        Bundle arg = getIntent().getExtras();
 
-        f = arg.getInt("fun");
-        e = arg.getInt("eat");
-        t = arg.getInt("toilet");
-        s = arg.getInt("sleep");
 
         final TextView funText = (TextView) findViewById(R.id.funstat);
         final TextView eatText = (TextView) findViewById(R.id.eatstat);
@@ -112,6 +107,5 @@ public class PersonView extends AppCompatActivity {
             finishAffinity();
         }
     }
-
 }
 
